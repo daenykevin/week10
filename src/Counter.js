@@ -1,22 +1,9 @@
 import { useState } from 'react';
 import CountNumber from './CountNumber';
+import Button from "./Button";
 
 function Counter() {
     const [count, setCount] = useState(0);
-
-    const buttonStyle = {
-        backgroundColor: "black",
-        border: "10px",
-        color: "white",
-        padding: "10px 20px",
-        display: "inline-block",
-        fontSize: "16px",
-        margin: "4px 2px",
-        cursor: "pointer",
-        borderRadius: "15px",
-        outlineColor: "blue",
-        outlineStyle: "solid",
-    };
  
     function increment() {
         setCount(count+1);
@@ -38,15 +25,15 @@ function Counter() {
     <div>
      <CountNumber count={count} />
 
-     <button style={buttonStyle} onClick={reduction10}>-10</button>
+     <Button text = {"-10"} func = {reduction10} />
 
-     <button style={buttonStyle} onClick={reduction}>-1</button>
+     <Button text = {"-1"} func = {reduction} />
 
-     <button style={buttonStyle} onClick={reset}>reset</button>
+     <Button text = {"reset"} func = {reset} />
 
-     <button style={buttonStyle} onClick={increment}>+1</button>
+     <Button text = {"+1"} func = {increment} />
 
-     <button style={buttonStyle} onClick={increment10}>+10</button>
+     <Button text = {"+10"} func = {increment10} />
      
     </div>
     )
